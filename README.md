@@ -39,7 +39,7 @@ Things you may want to cover:
 |member|string|null: false|
 ### Association
 - has_many :messages
-- has_many :groups_users, through: users
+- has_many :users, through: :groups_users
 
 
 ## groups_usersテーブル
