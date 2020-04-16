@@ -1,0 +1,29 @@
+.main_chat
+  .main_chat__group-info
+    .main_chat__group-info__group
+      .main_chat__group-info__group__title
+        test
+      %ul.main_chat__group-info__group__menber__list
+        Member:
+        %li.main_chat__group-info__group__menber__list__first
+          aa
+    = link_to "#", class: "main_chat__group-info__edit" do
+      Edit
+  
+  .main_chat__message-list
+    .main_chat__message-list__table
+      .main_chat__message-list__table__top
+        %p.main_chat__message-list__table__top__name
+          masa
+        %p.main_chat__message-list__table__top__date
+          2019/11/20(Wed) 17:43:01
+      %P.main_chat__message-list__table__text
+        おはよう！
+  .main_chat__message-form
+    %form.main_chat__message-form__new-message
+      .main_chat__message-form__new-message__input-box
+        %input{type: "text",class: "main_chat__message-form__new-message__input-box__input-text", placeholder: "type a message"}
+        %label{class: "main_chat__message-form__new-message__input-box__image"}
+          = icon('fas' ,'image')
+          %input{type: "file", class: "main_chat__message-form__new-message__input-box__image__file"}
+      %input{type: "submit", class: "main_chat__message-form__new-message__submit",name: "commit",value: "Send"}

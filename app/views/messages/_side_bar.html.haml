@@ -1,0 +1,26 @@
+.side_bar
+  .side_bar__user-name
+    .side_bar__user-name__side-box
+      %p.side_bar__user-name__side-box__name
+        masa
+      %ul.side_bar__user-name__side-box__menu
+        %li
+          = link_to "#", class: "side_bar__user-name__side-box__menu__new_group_btn" do
+            %i.far.fa-edit
+        %li
+          = link_to "#", class: "side_bar__user-name__side-box__menu__edit_btn" do
+            %i.fa.fa-cog
+  
+  .side_bar__group-list
+    =link_to '#', class: "side_bar__group-list__link" do
+      .side_bar__group-list__link__group
+        %p.side_bar__group-list__link__group__title
+          aaa
+        %p.side_bar__group-list__link__group__last-message
+          bbb
+    =link_to '#', class: "side_bar__group-list__link" do
+      .side_bar__group-list__link__group
+        %p.side_bar__group-list__link__group__title
+          ccc
+        %p.side_bar__group-list__link__group__last-message
+          ddd
