@@ -13,15 +13,10 @@
   
   .side_bar__group-list
     - current_user.groups.each do |group|
-      = link_to '#', class: "side_bar__group-list__link" do
+      .side_bar__group-list__link
         .side_bar__group-list__link__group
-          %p.side_bar__group-list__link__group__title
-            = group.name
-          %p.side_bar__group-list__link__group__last-message
-            メッセージはまだありません。
-    =link_to '#', class: "side_bar__group-list__link" do
-      .side_bar__group-list__link__group
-        %p.side_bar__group-list__link__group__title
-          ccc
-        %p.side_bar__group-list__link__group__last-message
-          ddd
+          = link_to group_messages_path(group) do
+            %p.side_bar__group-list__link__group__title
+              = group.name
+            %p.side_bar__group-list__link__group__last-message
+              = group.show_last_message
