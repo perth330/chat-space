@@ -39,8 +39,14 @@ $(function(){
       return html;
     };
   }
+  $('#new_message').submit(function () {
+    alert("2度押しです");
+    $(":submit", this).prop("disabled", true);
+    return false;
+  });
+
   $('#new_message').on('submit', function(e){
-      e.preventDefault();
+    e.preventDefault();
       var formData = new FormData(this);
       var url = $(this).attr('action');
       $.ajax({
